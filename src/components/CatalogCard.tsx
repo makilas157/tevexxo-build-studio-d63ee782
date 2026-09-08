@@ -7,11 +7,11 @@ export function CatalogCard({
   base,
 }: {
   item: CatalogItem;
-  base: "/services" | "/products";
+  base: "/services/$slug" | "/products/$slug";
 }) {
   return (
     <Link
-      to={`${base}/$slug`}
+      to={base}
       params={{ slug: item.slug }}
       className="catalog-card group flex flex-col"
     >
